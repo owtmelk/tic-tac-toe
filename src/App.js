@@ -24,6 +24,9 @@ export default function Board() {
 
   function handleClick(i) {
     const nextSquares = squares.slice();
+    if (squares[i]) {
+      return;
+    }
     if (xIsNext) {
       nextSquares[i] = 'X';
     } else {
